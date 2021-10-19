@@ -36,6 +36,7 @@ public class Book {
 	@Column
 	Boolean IsCheckedIn;
 	@Column
+	
 	Boolean IsOverdue;
 	@Column
 	LocalDate checkInByDate;
