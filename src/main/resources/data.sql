@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS book;
+DROP TABLE IF EXISTS Users;
 
 CREATE TABLE book (
   Id INT AUTO_INCREMENT  PRIMARY KEY,
@@ -22,7 +23,10 @@ CREATE TABLE Users (
     Username Varchar(250) NULL,
     Password Varchar(250) NULL,
     UserRole Varchar(250) NULL,
+    Email Varchar(250) NULL,
+    Address Varchar(250) NULL
 );
+
 
 INSERT INTO book(title, authorFirstName, authorLastName, ISB_Number,
   publicationDate,
@@ -34,7 +38,7 @@ INSERT INTO book(title, authorFirstName, authorLastName, ISB_Number,
   IsOverdue,
   checkInByDate,
   IsLate) VALUES
-  ('Aliko', 'Dangote', 'Billard', '02458ISBN', NULL, TRUE, NULL,NULL,NULL,FALSE,FALSE, NULL, NULL);
+  ('Aliko', 'Jake', 'Billard', '02458ISBN', NULL, TRUE, NULL,NULL,NULL,FALSE,FALSE, NULL, NULL);
   
   /*
   ('Bill', 'Gates', 'Billionaire Tech Entrepreneur'),
