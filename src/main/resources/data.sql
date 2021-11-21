@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS book;
 DROP TABLE IF EXISTS Users;
 
-CREATE TABLE book (
+CREATE TABLE Book (
   Id INT AUTO_INCREMENT  PRIMARY KEY,
   title VARCHAR(250) NULL,
   authorFirstName VARCHAR(250)  NULL,
@@ -25,6 +25,16 @@ CREATE TABLE Users (
     UserRole Varchar(250) NULL,
     Email Varchar(250) NULL,
     Address Varchar(250) NULL
+);
+
+CREATE TABLE Patrons (
+    Id INT AUTO_INCREMENT  PRIMARY KEY,
+    FirstName Varchar(250) NULL,
+    LastName Varchar(250) NULL,
+    Address Varchar(250) NULL,
+    StudentId Varchar(250) NULL,
+    DriverLiscenceNum Varchar(250) NULL,
+    PatronType Varchar(250) NULL,
 );
 
 
