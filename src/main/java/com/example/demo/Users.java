@@ -15,11 +15,30 @@ public class Users {
 	 * **/
 	@Id
 	@Column
-	String Username;
+	private String Username;
 	@Column
-	String Password;
+	private String Password;
 	@Column
-	String UserRole;
+	private String UserRole;
+	@Column
+	private String Email;
+	@Column
+	private String Address;
+	
+	
+	public String getEmail() {
+		return Email;
+	}
+	public void setEmail(String email) {
+		Email = email;
+	}
+	public String getAddress() {
+		return Address;
+	}
+	public void setAddress(String address) {
+		Address = address;
+	}
+	
 	
 	public String getUsername() {
 		return Username;
