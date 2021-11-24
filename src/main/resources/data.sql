@@ -1,4 +1,4 @@
--- Creating Book table
+--Creating Book table
 
 DROP TABLE IF EXISTS Book;
 
