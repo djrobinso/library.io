@@ -1,23 +1,15 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
-
-<div th:insert="fragments/fragments.html :: headLinks"></div>
-
-<body>
-	<div class="container">
-	      <label for="uname"><b>Username</b></label>
-	      <input type="text" placeholder="Enter Username" name="uname" required>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 	
-	      <label for="psw"><b>Password</b></label>
-	      <input type="password" placeholder="Enter Password" name="psw" required>
+	   
+    <head th:insert="fragment/fragments :: html_head">
+        <title>Library.io</title>
+    </head>
 	
-	      <button type="submit">Login</button>
-	      <label>
-	        <input type="checkbox" checked="checked" name="remember"> Remember me
-	      </label>
-	</div>
-</body>
-
-<footer th:insert="fragments/fragments.html :: footer"></footer>
+	<body>
+	<div th:insert="fragment :: header"></div>
+	</body>
+	
+	<div th:replace="fragments :: foot"></div>
 
 </html>

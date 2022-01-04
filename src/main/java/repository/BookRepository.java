@@ -1,4 +1,4 @@
-package com.example.demo;
+package repository;
 
 public class BookRepository {
 
