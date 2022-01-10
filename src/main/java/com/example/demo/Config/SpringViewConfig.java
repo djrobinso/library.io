@@ -9,9 +9,8 @@ public class SpringViewConfig implements WebMvcConfigurer {
 	
 	public void addViewControllers(ViewControllerRegistry registry) {
 		
-		registry.addRedirectViewController("/", "index.html");
-		//registry.addViewController("/index").setViewName("home");
-		//registry.addViewController("/").setViewName("home");
+		//registry.addRedirectViewController("/", "");
+		registry.addViewController("/").setViewName("index");
 		registry.addViewController("/login").setViewName("login");
 	}
 
