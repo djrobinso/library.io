@@ -13,6 +13,11 @@ public class Users {
 	/*
 	 * jdbc:h2:file:C:/data/sample
 	 * **/
+	
+	public Users() {
+		
+	}
+	
 	@Id
 	@Column
 	private String Username;

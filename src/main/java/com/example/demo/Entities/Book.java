@@ -14,6 +14,10 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @Table
 public class Book {
 	
+	public Book() {
+		
+	}
+	
 	@Id
 	@Column
 	String title;

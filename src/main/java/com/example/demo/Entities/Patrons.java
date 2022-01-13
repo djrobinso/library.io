@@ -9,6 +9,10 @@ import javax.persistence.Table;
 @Table
 public class Patrons {
 	
+	public Patrons() {
+		
+	}
+	
 	@Id
 	@Column
 	public String FirstName;
