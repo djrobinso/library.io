@@ -31,7 +31,7 @@ INSERT INTO book(title, authorFirstName, authorLastName, ISB_Number,
   
 
   --Creating Users table 
-  DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS Users;
 CREATE TABLE Users (
     Id INT AUTO_INCREMENT  PRIMARY KEY,
     Username Varchar(250) NULL,
@@ -41,7 +41,7 @@ CREATE TABLE Users (
     Address Varchar(250) NULL
 );
 INSERT INTO Users (Username, Password, UserRole, Email, Address) VALUES
-                  ('djrobinso','zaf56874','Librarian','deyonta@coast.edu','4578  Kelly Drive, Columbia SC, 29584');
+('djrobinso','zaf56874','Librarian','deyonta@coast.edu','4578  Kelly Drive, Columbia SC, 29584');
 
 
 
