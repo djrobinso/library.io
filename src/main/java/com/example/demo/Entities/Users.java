@@ -1,9 +1,5 @@
 package com.example.demo.Entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Table;
 import javax.persistence.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
@@ -19,6 +15,9 @@ public class Users {
 	}
 	
 	@Id
+	@GeneratedValue
+	private int Id;
+	
 	@Column
 	private String Username;
 	@Column

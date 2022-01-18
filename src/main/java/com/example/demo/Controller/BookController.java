@@ -39,6 +39,7 @@ public class BookController {
 	@PostMapping("/Book/BookAdded")
 	public String submitNewBook(@ModelAttribute Book newBook, Model model) {
 		model.addAttribute("newBook", newBook );
+		bookRepository.save(newBook);
 		return "book/BookAdded";
 	}
 	

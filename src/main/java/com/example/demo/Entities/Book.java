@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import javax.persistence.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * @author Deyonta
@@ -11,7 +12,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
  */
 
 @Entity
-@Table
+@Table(name = "Book")
 public class Book {
 	
 	public Book() {
@@ -19,32 +20,48 @@ public class Book {
 	}
 	
 	@Id
-	@Column
-	String title;
-	@Column
-	String authorFirstName;
-	@Column
-	String authorLastName;
-	@Column
-	String ISN_Number;
-	@Column
-	LocalDate publicationDate;
-	@Column
-	Boolean IsCheckedOut;
-	@Column
-	LocalDateTime checkedOutDate;
-	@Column
-	LocalDateTime checkedInDate;
-	@Column
-	Boolean checkInDate;
-	@Column
-	Boolean IsCheckedIn;
-	@Column
-	Boolean IsOverdue;
-	@Column
-	LocalDate checkInByDate;
-	@Column
-	Boolean IsLate;
+	@GeneratedValue
+	private int Id;
+	
+	@Column(name ="title")
+	private String title;
+	
+	@Column(name ="authorFirstName")
+	private String authorFirstName;
+	
+	@Column(name ="authorLastName")
+	private String authorLastName;
+	
+	@Column(name ="ISB_Number")
+	private String ISB_Number;
+	
+	@Column(name ="publicationDate")
+	@DateTimeFormat(pattern = "dd.MM.yyyy")
+	private LocalDate publicationDate;
+	
+	@Column(name ="IsCheckedOut")
+	private Boolean IsCheckedOut;
+	
+	@Column(name ="checkedOutDate")
+	private LocalDateTime checkedOutDate;
+	
+	@Column(name ="checkedInDate")
+	private LocalDateTime checkedInDate;
+	
+	@Column(name ="checkInDate")
+	private Boolean checkInDate;
+	
+	@Column(name ="IsCheckedIn")
+	private Boolean IsCheckedIn;
+	
+	@Column(name ="IsOverdue")
+	private Boolean IsOverdue;
+	
+	@Column(name ="checkInByDate")
+	private LocalDate checkInByDate;
+	
+	@Column(name ="IsLate")
+	private Boolean IsLate;
 	
 	
 	public String getTitle() {
@@ -72,11 +89,11 @@ public class Book {
 	}
 	
 	public String getISN_Number() {
-		return ISN_Number;
+		return ISB_Number;
 	}
 	
 	public void setISN_Number(String iSN_Number) {
-		ISN_Number = iSN_Number;
+		ISB_Number = iSN_Number;
 	}
 	
 	public LocalDate getPublicationDate() {

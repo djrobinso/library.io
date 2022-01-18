@@ -1,4 +1,5 @@
 --Creating Book table
+/**
 DROP TABLE IF EXISTS Book;
 CREATE TABLE Book (
   Id INT AUTO_INCREMENT  PRIMARY KEY,
@@ -27,7 +28,7 @@ INSERT INTO book(title, authorFirstName, authorLastName, ISB_Number,
   checkInByDate,
   IsLate) VALUES
   ('Aliko', 'Jake', 'Billard', '02458ISBN', NULL, TRUE, NULL,NULL,NULL,FALSE,FALSE, NULL, NULL);
-
+**/
   
 
   --Creating Users table 

@@ -2,6 +2,7 @@ package com.example.demo.Entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,6 +15,9 @@ public class Patrons {
 	}
 	
 	@Id
+	@GeneratedValue
+	private int Id;
+	
 	@Column
 	public String FirstName;
 	@Column
