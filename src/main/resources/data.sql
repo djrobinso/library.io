@@ -32,6 +32,7 @@ INSERT INTO book(title, authorFirstName, authorLastName, ISB_Number,
   
 
   --Creating Users table 
+/**
 DROP TABLE IF EXISTS Users;
 CREATE TABLE Users (
     Id INT AUTO_INCREMENT  PRIMARY KEY,
@@ -43,10 +44,12 @@ CREATE TABLE Users (
 );
 INSERT INTO Users (Username, Password, UserRole, Email, Address) VALUES
 ('djrobinso','zaf56874','Librarian','deyonta@coast.edu','4578  Kelly Drive, Columbia SC, 29584');
+**/
 
 
 
 -- Creating Patrons table
+/**
 DROP TABLE IF EXISTS Patrons;
 CREATE TABLE Patrons (
     Id INT AUTO_INCREMENT  PRIMARY KEY,
@@ -63,7 +66,6 @@ INSERT INTO Patrons (FirstName, LastName, Address, StudentId, DriverLiscenceNum,
                     ('Miley', 'Cyrus', '843 James Ave', '08954785', '10652345', 'Student');
 INSERT INTO Patrons (FirstName, LastName, Address, StudentId, DriverLiscenceNum, PatronType) VALUES
                     ('Donovan', 'Plummer', '245 Sunset Boulevard', '08456824', '54785968', 'Student');
-
-  
+***/
   
   

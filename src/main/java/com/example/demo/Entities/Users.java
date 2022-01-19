@@ -4,7 +4,7 @@ import javax.persistence.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @Entity
-@Table
+@Table(name = "Users")
 public class Users {
 	/*
 	 * jdbc:h2:file:C:/data/sample
@@ -18,15 +18,19 @@ public class Users {
 	@GeneratedValue
 	private int Id;
 	
-	@Column
+	@Column(name = "Username")
 	private String Username;
-	@Column
+	
+	@Column(name = "Password")
 	private String Password;
-	@Column
+	
+	@Column(name = "UserRole")
 	private String UserRole;
-	@Column
+	
+	@Column(name = "Email")
 	private String Email;
-	@Column
+	
+	@Column(name = "Address")
 	private String Address;
 	
 	

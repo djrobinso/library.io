@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "Patrons")
 public class Patrons {
 	
 	public Patrons() {
@@ -18,18 +18,23 @@ public class Patrons {
 	@GeneratedValue
 	private int Id;
 	
-	@Column
-	public String FirstName;
-	@Column
-	public String LastName;
-	@Column
-	public String Address;
-    @Column
-	public String StudentId;
-    @Column
-	public String DriverLiscenceNum;
-    @Column
-	public String PatronType;
+	@Column(name = "FirstName")
+	private String FirstName;
+	
+	@Column(name = "LastName")
+	private String LastName;
+	
+	@Column(name = "Address")
+	private String Address;
+	
+    @Column(name = "StudentId")
+	private String StudentId;
+    
+    @Column(name = "DriverLiscenceNum")
+	private String DriverLiscenceNum;
+    
+    @Column(name = "PatronType")
+	private String PatronType;
     
 	public String getFirstName() {
 		return FirstName;
