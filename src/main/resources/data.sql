@@ -67,5 +67,22 @@ INSERT INTO Patrons (FirstName, LastName, Address, StudentId, DriverLiscenceNum,
 INSERT INTO Patrons (FirstName, LastName, Address, StudentId, DriverLiscenceNum, PatronType) VALUES
                     ('Donovan', 'Plummer', '245 Sunset Boulevard', '08456824', '54785968', 'Student');
 ***/
+/***
+
+DROP TABLE IF EXISTS Patron_Type_Table;
+CREATE TABLE Patron_Type_Table (
+    Id INT AUTO_INCREMENT  PRIMARY KEY,
+    Patron_Type_Code VarChar(250) NULL,
+    Patron_Type Varchar(250) NULL
+);
+**/
+INSERT INTO Patron_Type_Table (Id, Patron_Type_Code, Patron_Type) VALUES (1, '01','Student');
+INSERT INTO Patron_Type_Table (Id, Patron_Type_Code, Patron_Type) VALUES (2, '02','Alumni');
+INSERT INTO Patron_Type_Table (Id, Patron_Type_Code, Patron_Type) VALUES (3, '03','Community');
+
+
+
+                
+
   
   

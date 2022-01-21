@@ -5,24 +5,28 @@
 	<body>
 		<form action="#" th:action="@{/Patron/PatronAdded}" method="post" th:object="${newPatron}">
 		  <label for="">First Name: </label>
-		  <input type="text" th:field="*{FirstName}" />
+		  <input type="text" th:field="*{FirstName}" /><br />
 		  
 		  <label for="">Last Name: </label>
-		  <input type="text" th:field="*{LastName}" />
+		  <input type="text" th:field="*{LastName}" /><br />
 		  
 		  <label for="">Address: </label>
-		  <input type="text" th:field="*{Address}" />
+		  <input type="text" th:field="*{Address}" /><br />
 		  
 		  <label for="">Student Id: </label>
-		  <input type="text" th:field="*{StudentId}" />
+		  <input type="text" th:field="*{StudentId}" /><br />
 		  
 		  <label for="">Drivers License Number: </label>
-		  <input type="text" th:field="*{DriverLiscenceNum}" />
+		  <input type="text" th:field="*{DriverLiscenceNum}" /><br />
 		  
 		  <label for="">Type of Patron:</label>
-		  <input type="text" th:field="*{PatronType}" />
+		  <select th:field="*{PatronType}">
+		      <option th:each="p : ${availablePatronTypes}" th:value="${p}" th:text="${p}"></option>
+		  </select>
 		  
-		  <button type="button">Add</button>
+		  <button type="submit">Add</button><br />
 		</form>
 	</body>
+	<footer th:insert="./fragments :: footer"></footer>
+	
 </html>

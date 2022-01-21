@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.Entities.PatronTypeTable;
 import com.example.demo.Entities.Patrons;
 import com.example.demo.Repository.PatronRepository;
 
@@ -20,11 +21,13 @@ public class PatronsController {
 	@GetMapping("/Patron/AddPatron")
 	public String addPatron(Model model) {
 		Patrons newPatron = new Patrons();
+		var availablePatronTypes = patronRepository.GetPatronTypes();
 		model.addAttribute("newPatron", newPatron);
+		model.addAttribute("availablePatronTypes", availablePatronTypes);
 		return "/Patron/AddPatron";
 	}
 	
-	@PostMapping("")
+	@PostMapping("/Patron/PatronAdded")
 	public String submitNewPatron(@ModelAttribute Patrons newPatron, Model model) {
 		model.addAttribute("newPatron", newPatron);
 		patronRepository.save(newPatron);

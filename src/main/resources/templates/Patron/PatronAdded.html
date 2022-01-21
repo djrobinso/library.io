@@ -3,6 +3,31 @@
     xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity">
     <head th:insert="./fragments :: html_head"><title></title></head>
 	<body>
-		
-	</body>
+	       <h1>New Patron has been added</h1>
+            <span>First Name: </span>
+            <span th:text="${newPatron.FirstName}"></span>
+            <br />
+            
+            <span>Last Name: </span>
+            <span th:text="${newPatron.LastName}"></span>
+            <br />
+            
+            <span>Address: </span>
+            <span th:text="${newPatron.Address}"></span>
+            <br />
+            
+            <span>Student Id: </span>
+            <span th:text="${newPatron.StudentId}"></span>
+            <br />
+            
+            <span>Drivers License Number: </span>
+            <span th:text="${newPatron.DriverLiscenceNum}"></span>
+            <br />
+            
+            <span>Type of Patron: </span>
+            <span th:text="${newPatron.PatronType}"></span>
+            <br />
+            <a th:href="@{/}">Confirm</a>
+    </body>
+    <footer th:insert="./fragments :: footer"></footer>
 </html>
