@@ -2,9 +2,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" 
     xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 	   
-    <head>
-        <title>Library.io</title>
-    </head>
+    <head th:insert="fragments :: html_head"><title></title></head>
+    <nav th:insert="fragments :: navbar"></nav>
     <body>
         <div>
             <h1>Books</h1>
@@ -20,10 +19,10 @@
         </div>
         <div>
         	<h1>Employee</h1>
-        	<a th:href="@{./Employee/AddEmployee}">Add Employee</a>
-        	<a th:href="@{./Employee/EditEmployee}">Edit Employee</a>
+        	<a th:href="@{./Users/AddEmployee}">Add Employee</a>
+        	<a th:href="@{./Users/EditEmployee}">Edit Employee</a>
         </div>
     	 
     </body>
-	
+	<footer th:insert="fragments :: footer"></footer>
 </html>

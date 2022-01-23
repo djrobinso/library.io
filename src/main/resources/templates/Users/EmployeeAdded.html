@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" 
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity">
+    <head th:insert="./fragments :: html_head"><title></title></head>
+    <nav th:insert="./fragments :: navbar"></nav>
+	<body>
+	   <h1>New Employee Added</h1>
+	   <span>UserName: </span>
+	   <span th:text="${newEmployee.Username}"></span>
+	   <br />
+	   
+	   <span>UserRole: </span>
+	   <span th:text="${newEmployee.UserRole}"></span>
+	   <br />
+	   
+	   <span>Email: </span>
+	   <span th:text="${newEmployee.Email}"></span>
+	   <br />
+	   
+	   <span>Address: </span>
+	   <span th:text="${newEmployee.Address}"></span>
+	   <br />
+	   
+	   <a th:href="@{/}">Confirm</a>
+	   
+	</body>
+</html>

@@ -16,7 +16,7 @@ public class PatronTypeTable {
 	}
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int Id;
 	
 	@Column(name = "PatronTypeCode")

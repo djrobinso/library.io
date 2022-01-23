@@ -76,9 +76,12 @@ CREATE TABLE Patron_Type_Table (
     Patron_Type Varchar(250) NULL
 );
 **/
-INSERT INTO Patron_Type_Table (Id, Patron_Type_Code, Patron_Type) VALUES (1, '01','Student');
-INSERT INTO Patron_Type_Table (Id, Patron_Type_Code, Patron_Type) VALUES (2, '02','Alumni');
-INSERT INTO Patron_Type_Table (Id, Patron_Type_Code, Patron_Type) VALUES (3, '03','Community');
+INSERT INTO Patron_Type_Table ( Patron_Type_Code, Patron_Type) VALUES ( '01','Student');
+INSERT INTO Patron_Type_Table ( Patron_Type_Code, Patron_Type) VALUES ( '02','Alumni');
+INSERT INTO Patron_Type_Table (Patron_Type_Code, Patron_Type) VALUES ( '03','Community');
+INSERT INTO User_Role ( User_Role_Code, User_Role_Authentication) VALUES ( '01','Admin');
+INSERT INTO User_Role ( User_Role_Code, User_Role_Authentication) VALUES ( '02','User');
+
 
 
 
