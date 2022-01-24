@@ -3,18 +3,26 @@
               xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
     <div th:insert="fragments :: html_head"></div>
     <body>
-	    <div th:insert="fragments :: header"></div>
+        <div class="container">
 	        <h1>Login Screen</h1>
-	        <div th:if="${param.error}">
-	            Invalid UserName and password.
-	        </div>
-	        <div th:if="${param.logout}">
-	            You have been logged out.
-	        </div>
-	        <form th:action="@{/login}" method="post">
-	            <div><label> User Name : <input type="text" name="username"/> </label></div>
-	            <div><label> Password: <input type="password" name="password"/> </label></div>
-	            <div><input type="submit" value="Sign In"/></div>
-	        </form>
+		        <div th:if="${param.error}">
+		            Invalid UserName and password.
+		        </div>
+		        <div th:if="${param.logout}">
+		            You have been logged out.
+		        </div>
+		        
+		        <form th:action="@{/login}" method="post">
+		           <div class="col-xs-6">
+		               <label for="enterUsername"> User Name : </label>
+		               <input id="enterUsername" class="form-control" type="text" name="username" placeholder="Username"/> 
+		           </div>
+		           <div class="col-xs-6">
+		               <label for="enterPassword"> Password: </label>
+		               <input id="enterPassword" class="form-control" type="password" name="password" placeholder=" Password" />
+		           </div><br />
+		           <input type="submit" class="btn btn-primary" value="Sign In"/>
+		        </form>
+        </div>
     </body>
 </html>

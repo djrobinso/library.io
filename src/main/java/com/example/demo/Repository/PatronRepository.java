@@ -19,6 +19,9 @@ public interface PatronRepository extends CrudRepository <Patrons, Long> {
 	 @Query(value ="Select Patron_Type From Patron_Type_Table", nativeQuery=true)
 	 public List<String> GetPatronTypes();
 	 
+	 @Query(value="Select * from Patrons", nativeQuery=true)
+	 public List<Patrons> getAllPatrons();
+	 
 	
 
 }

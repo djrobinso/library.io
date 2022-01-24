@@ -34,5 +34,12 @@ public class PatronsController {
 		return "/Patron/PatronAdded";
 	}
 	
+	@RequestMapping("/Patron/LookUpPatron")
+	public String lookUpPatron(Model model) {
+		var listofPatrons = patronRepository.getAllPatrons();
+		model.addAttribute("listofPatrons", listofPatrons);
+		return"/Patron/LookUpPatron";
+	}
+	
 
 }

@@ -29,6 +29,7 @@ public class BookController {
 		return "book/CheckOut";
 	}
 	
+	//Adding a new book to database
 	@GetMapping("/Book/AddBook")
 	public String addBook(Model model){
 		Book newBook = new Book();
@@ -36,11 +37,20 @@ public class BookController {
 		return "book/AddBook";
 	}
 	
+	//Saving the info and going to the confirm page
 	@PostMapping("/Book/BookAdded")
 	public String submitNewBook(@ModelAttribute Book newBook, Model model) {
 		model.addAttribute("newBook", newBook );
 		bookRepository.save(newBook);
 		return "book/BookAdded";
+	}
+	
+	@RequestMapping("/Book/LookUpBooks")
+	public String lookUpBooks(Model model) {
+		var listOfBooks = bookRepository.getAllBooks();
+		model.addAttribute("listOfBooks", listOfBooks);
+		return "/Book/LookUpBooks";
+		
 	}
 	
 }

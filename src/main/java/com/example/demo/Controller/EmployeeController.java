@@ -15,8 +15,9 @@ import com.example.demo.Repository.UserRepository;
 public class EmployeeController {
 	
 	@Autowired
-	UserRepository employeeRepository;
+	private UserRepository employeeRepository;
 	
+	//Adding new employees
 	@GetMapping("/Users/AddEmployee")
 	public String addEmployee(Model model) {
 		Users newEmployee = new Users();
@@ -26,10 +27,22 @@ public class EmployeeController {
 		return "/Users/AddEmployee";
 	}
 	
+	//Going to save the new employee entered info and going to the confirm page
 	@PostMapping("/Users/EmployeeAdded")
 	public String submitNewEmployee(@ModelAttribute Users newEmployee, Model model) {
 		model.addAttribute("newEmployee", newEmployee);
 		employeeRepository.save(newEmployee);
 		return "/Users/EmployeeAdded";
 	}
+	
+	//going to lookup all employees
+	@RequestMapping("/Users/LookUpEmployee")
+	public String lookUpEmployees(Model model) {
+		var listOfEmployees = employeeRepository.getAllEmployees();
+		model.addAttribute("listOfEmployees", listOfEmployees);
+		return "/Users/LookUpEmployee";
+	}
+	
+	
+	
 }

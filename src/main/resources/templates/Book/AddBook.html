@@ -2,22 +2,33 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" 
     xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
     <head th:insert="./fragments :: html_head"><title></title></head>
+    <nav th:insert="./fragments :: navbar"></nav>
 	<body>
-	   <form action="#" th:action="@{/Book/BookAdded}" method="post" th:object="${newBook}">
-	    <label>Title:</label>
-		 <input type="text" th:field="*{title}" /><br />
-		 
-		 <label for="">Author's First Name</label>
-		 <input type="text" th:field="*{authorFirstName}" /><br />
-		 
-		 <label for="">Author's Last Name</label>
-		 <input type="text" th:field="*{authorLastName}"/><br />
-		 
-		 <label for="">ISN Number</label>
-		 <input type="text" th:field="*{ISN_Number}" /><br />
-		 
-		 <button type="submit">Add</button><br />
-		 </form>
-		
+	   <div class="container">
+		   <form action="#" th:action="@{/Book/BookAdded}" method="post" th:object="${newBook}">
+			   
+			   <div class="form-group">
+			     <label for="enterAuthorsFirst">Author's First Name</label>
+			     <input id="enterAuthorsFirst" type="text" class="form-control" th:field="*{authorFirstName}" placeholder="Author's First Name"  />
+			   </div>
+			   
+			   <div class="form-group">
+			     <label for="enterAuthorsLast">Author's Last Name</label>
+			     <input id="enterAuthorsLast" type="text" class="form-control" th:field="*{authorLastName}" placeholder="Author's Last Name" />
+			   </div>
+			   
+			   <div class="form-group">
+			     <label for="enterTitle">Title:</label>
+			     <input id="enterTitle" class="form-control" type="text" th:field="*{title}" placeholder="Book Title" /><br />
+			   </div>
+			   
+			   <div class="form-group">
+			     <label for="enterISN">ISN Number</label>
+			     <input id="enterISN" class="form-control" type="text" th:field="*{ISN_Number}" placeholder="Enter ISN Number"/><br />
+			   </div><br />
+			 
+			 <button type="submit" class="btn btn-primary">Add Book</button><br />
+			 </form>
+	   </div>
 	</body>
 </html>

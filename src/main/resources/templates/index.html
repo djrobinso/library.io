@@ -7,20 +7,26 @@
     <body>
         <div>
             <h1>Books</h1>
-            <a th:href="@{./Book/AddBook}">Add Book</a>
-            <a th:href="@{./Book/CheckIn}">Check In</a>
-            <a th:href="@{./Book/CheckOut}">Check Out</a>
-            <a th:href="@{./Book/EditBookDetails}">Book Details</a>
+            <ul>
+            	<li><a th:href="@{./Book/AddBook}">Add Book</a></li>
+            	<li><a th:href="@{./Book/CheckIn}">Check In</a></li>
+            	<li><a th:href="@{./Book/CheckOut}">Check Out</a></li>
+            	<li><a th:href="@{./Book/LookUpBooks}">Look Up Books</a></li>
+            </ul>
         </div>
         <div>
             <h1>Community Patrons</h1>
-            <a th:href="@{./Patron/AddPatron}">Add Patron</a>
-            <a th:href="@{./Patron/EditPatron}">Edit Patron</a>
+            <ul>
+            	<li><a th:href="@{./Patron/AddPatron}">Add Patron</a></li>
+            	<li><a th:href="@{./Patron/LookUpPatron}">Look Up Patrons</a></li>
+            </ul>
         </div>
         <div>
         	<h1>Employee</h1>
-        	<a th:href="@{./Users/AddEmployee}">Add Employee</a>
-        	<a th:href="@{./Users/EditEmployee}">Edit Employee</a>
+        	<ul>
+        		<li><a th:href="@{./Users/AddEmployee}">Add Employee</a></li>
+        		<li><a th:href="@{./Users/LookUpEmployee}">Look Up Employees</a></li>
+        	</ul>
         </div>
     	 
     </body>

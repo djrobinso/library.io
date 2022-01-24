@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head th:insert="./fragments :: html_head"><title></title></head>
+    <nav th:insert="./fragments :: navbar"></nav>
+	<body>
+		<table>
+		  <tr>
+			<th>UserName</th>
+			<th>UserRole</th>
+			<th>Email</th>
+		  </tr>
+		  <tr th:each="user : ${listOfEmployees}">
+		  	<td th:text="${user.Username}"></td>
+		  	<td th:text="${user.UserRole}"></td>
+		  	<td th:text="${user.Email}"></td>
+		  </tr>
+		</table>
+	</body>
+	<footer th:insert="./fragments :: footer"></footer>
+</html>

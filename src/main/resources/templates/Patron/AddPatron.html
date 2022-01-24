@@ -4,30 +4,45 @@
     <head th:insert="./fragments :: html_head"><title></title></head>
     <nav th:insert="./fragments :: navbar"></nav>
 	<body>
-		<form action="#" th:action="@{/Patron/PatronAdded}" method="post" th:object="${newPatron}">
-		  <label for="">First Name: </label>
-		  <input type="text" th:field="*{FirstName}" /><br />
-		  
-		  <label for="">Last Name: </label>
-		  <input type="text" th:field="*{LastName}" /><br />
-		  
-		  <label for="">Address: </label>
-		  <input type="text" th:field="*{Address}" /><br />
-		  
-		  <label for="">Student Id: </label>
-		  <input type="text" th:field="*{StudentId}" /><br />
-		  
-		  <label for="">Drivers License Number: </label>
-		  <input type="text" th:field="*{DriverLiscenceNum}" /><br />
-		  
-		  <label for="">Type of Patron:</label>
-		  <select th:field="*{PatronType}">
-		      <option th:each="p : ${availablePatronTypes}" th:value="${p}" th:text="${p}"></option>
-		  </select><br />
-		  
-		  <button type="submit">Add</button><br />
-		</form>
+	   
+	   <div class="container">
+	        <form action="#" th:action="@{/Patron/PatronAdded}" method="post" th:object="${newPatron}">
+	           <div class="form-group">
+		           <label for="enterFirstName">First Name: </label>
+		          <input id="enterFirstName"  class="form-control" type="text" th:field="*{FirstName}" /><br />
+		       </div>
+		       
+		       <div class="form-group">
+		          <label for="enterLastName">Last Name: </label>
+		          <input id="enterLastName" type="text" class="form-control" th:field="*{LastName}" /><br />
+		       </div>
+		       
+		       <div class="form-group">
+		          <label for="enterAddress">Address: </label>
+		          <input id="enterAddress" type="text" class="form-control" th:field="*{Address}" /><br />
+		       </div>
+		       
+		       <div class="form-group">
+		          <label for="enterStudentId">Student Id: </label>
+		          <input id="enterStudentId" type="text" class="form-control" th:field="*{StudentId}" /><br />
+		       </div>
+		       
+		       <div class="form-group">
+		          <label for="enterDrivers">Drivers License Number: </label>
+		          <input id="enterDrivers" type="text" class="form-control" th:field="*{DriverLiscenceNum}" /><br />
+		       </div>
+		       
+		       <div class="form-group">
+		          <label for="selectPatronType">Type of Patron:</label>
+				  <select id="selectPatronType" class="form-select form-select-sm" aria-label=".form-select-sm example"  th:field="*{PatronType}">
+				      <option th:each="p : ${availablePatronTypes}" th:value="${p}" th:text="${p}"></option>
+				  </select><br />
+		       </div>
+		       
+		       <button type="submit" class="btn btn-primary">Add</button><br />
+		       
+	       </form>
+	   </div>
 	</body>
 	<footer th:insert="./fragments :: footer"></footer>
-	
 </html>

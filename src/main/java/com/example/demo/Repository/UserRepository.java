@@ -13,7 +13,10 @@ import com.example.demo.Entities.Users;
 public interface UserRepository extends CrudRepository <Users, Long>{
 	
 	@Query(value="Select User_Role_Authentication from User_Role", nativeQuery=true)
-	List<String> getUserRoles();
+	public List<String> getUserRoles();
+	
+	@Query(value="Select * from Users", nativeQuery=true)
+	public List<Users> getAllEmployees();
 
 
 }

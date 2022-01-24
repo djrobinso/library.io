@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" 
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity">
+    <head th:insert="./fragments :: html_head"><title></title></head>
+    <nav th:insert="./fragments :: navbar"></nav>
+	<body>
+		<table>
+		  <tr>
+		  	<th>First</th>
+		  	<th>Last</th>
+		  	<th>Student Id</th>
+		  	<th>Type</th>
+		  </tr>
+		  <tr th:each="patron: ${listofPatrons}">
+		  	<td th:text="${patron.FirstName}"></td>
+		  	<td th:text="${patron.LastName}"></td>
+		  	<td th:text="${patron.StudentId}"></td>
+		  	<td th:text="${patron.PatronType}"></td>
+		  </tr>
+		</table>
+	</body>
+	<footer th:insert="./fragments :: footer"></footer>
+</html>
