@@ -3,23 +3,35 @@
 	<head th:insert="./fragments :: html_head"><title></title></head>
 	<nav th:insert="./fragments :: navbar"></nav>
 	<body>
-	   <form action="#" th:action="@{/Users/EmployeeAdded}" method="post" th:object="${newEmployee}">
-           <label for="">UserName: </label>
-           <input type="text" th:field="*{Username}" /><br />
-           
-           <label for="">UserRole: </label>
-           <select th:field="*{UserRole}" >
-           	    <option th:each="p : ${userRoles}" th:value="${p}" th:text="${p}"></option>
-           </select ><br />
-           
-           <label for="">Email: </label>
-           <input type="email" th:field="*{Email}"  /><br />
-           
-           <label for="">Address: </label>
-           <input type="text" th:field="*{Address}"  /><br />
-           
-           <button type="submit">Submit</button><br />
-       </form>
+	   <div class="container">
+	   
+	   	<form action="#" th:action="@{/Users/EmployeeAdded}" method="post" th:object="${newEmployee}">
+	   		<div class="form-group">
+	   		  <label for="enterUsername">UserName: </label>
+              <input id="enterUsername" class="form-control" type="text" th:field="*{Username}" placeholder="Username" /><br />
+	   		</div>
+	   		
+	   		<div class="form-group">
+	   		  <label for="enterUserRole">UserRole: </label>
+	          <select id="enterUserRole" th:field="*{UserRole}" >
+	                <option th:each="p : ${userRoles}" th:value="${p}" th:text="${p}"></option>
+	          </select ><br />
+	   		</div>
+	   		
+	   		<div class="form-group">
+	   		  <label for="enterEmail">Email: </label>
+              <input id="enterEmail" class="form-control" type="email" th:field="*{Email}" placeholder="Email" /><br />
+	   		</div>
+	   		
+	   		<div class="form-group">
+	   		  <label for="enterAddress">Address: </label>
+              <input id="enterAddress" class="form-control" type="text" th:field="*{Address}" placeholder="Address" /><br />
+	   		</div>
+	   		
+	   		<button type="submit" class="btn btn-primary">Submit</button><br />
+	   	</form>
+	   	
+	   </div>
 	</body>
 	<footer th:insert="./fragments :: footer"></footer>
 	
