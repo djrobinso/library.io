@@ -4,21 +4,27 @@
 	<head th:insert="./fragments :: html_head"><title></title></head>
 	<nav th:insert="./fragments :: navbar"></nav>
 	<body>
-		<table>
-			<tr>
-				 <th>Title</th>
-				 <th>Author First</th>
-				 <th>Author Last </th>
-				 <th>Publication Date</th>
-				 <th></th>
-			</tr>
-			<tr th:each="book: ${listOfBooks}">
-				 <td th:text="${book.title}"></td>
-				 <td th:text="${book.authorFirstName}"></td>
-				 <td th:text="${book.authorLastName}"></td>
-				 <td th:text="${book.publicationDate}"></td>
-			</tr>
+	
+	<div class="container">
+		<table class="table table-hover">
+			<thead>
+			 <tr>
+			     <th scope="col">Title</th>
+				 <th scope="col">Author First</th>
+				 <th scope="col">Author Last </th>
+				 <th scope="col">Publication Date</th>
+			 </tr>
+			</thead>
+			<tbody>
+			 <tr th:each="book: ${listOfBooks}">
+                 <td th:text="${book.title}"></td>
+                 <td th:text="${book.authorFirstName}"></td>
+                 <td th:text="${book.authorLastName}"></td>
+                 <td th:text="${book.publicationDate}"></td>
+            </tr>
+			</tbody>
 		</table>
+	</div>
 	</body>
 	<footer th:insert="./fragments :: footer"></footer>
 </html>

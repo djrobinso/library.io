@@ -4,18 +4,26 @@
     <head th:insert="./fragments :: html_head"><title></title></head>
     <nav th:insert="./fragments :: navbar"></nav>
 	<body>
-		<table>
-		  <tr>
-			<th>UserName</th>
-			<th>UserRole</th>
-			<th>Email</th>
-		  </tr>
-		  <tr th:each="user : ${listOfEmployees}">
-		  	<td th:text="${user.Username}"></td>
-		  	<td th:text="${user.UserRole}"></td>
-		  	<td th:text="${user.Email}"></td>
-		  </tr>
-		</table>
+	
+	   <div class="container">
+	   	<table class="table table-hover">
+	   		<thead>
+		   		<tr>
+					<th scope="col">UserName</th>
+					<th scope="col">UserRole</th>
+					<th scope="col">Email</th>
+			    </tr>
+	   		</thead>
+	   		<tbody>
+		   		<tr th:each="user : ${listOfEmployees}">
+				  	<td th:text="${user.Username}"></td>
+				  	<td th:text="${user.UserRole}"></td>
+				  	<td th:text="${user.Email}"></td>
+		       </tr>
+	   		</tbody>
+	   	</table>
+	   </div>
+	   
 	</body>
 	<footer th:insert="./fragments :: footer"></footer>
 </html>
