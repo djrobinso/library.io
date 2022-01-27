@@ -79,8 +79,26 @@ CREATE TABLE Patron_Type_Table (
 INSERT INTO Patron_Type_Table ( Patron_Type_Code, Patron_Type) VALUES ( '01','Student');
 INSERT INTO Patron_Type_Table ( Patron_Type_Code, Patron_Type) VALUES ( '02','Alumni');
 INSERT INTO Patron_Type_Table (Patron_Type_Code, Patron_Type) VALUES ( '03','Community');
+
 INSERT INTO User_Role ( User_Role_Code, User_Role_Authentication) VALUES ( '01','Admin');
 INSERT INTO User_Role ( User_Role_Code, User_Role_Authentication) VALUES ( '02','User');
+
+INSERT INTO Book (Id, Title, author_First_Name, author_Last_Name) VALUES (1, 'Jacobs Ladder', 'Stephen', 'King');
+INSERT INTO Book (Id, Title, author_First_Name, author_Last_Name) VALUES (2, 'Scary Book', 'John', 'Oliver');
+INSERT INTO Book (Id, Title, author_First_Name, author_Last_Name) VALUES (3, 'Jacobs Ladder', 'Stephen', 'King');
+
+INSERT INTO Patrons (Id, First_Name, Last_Name, Address, Student_Id) VALUES (1, 'Deyonta', 'Robinson', '3313 New Genisis Dr', '045789653');
+INSERT INTO Patrons (Id, First_Name, Last_Name, Address, Student_Id) VALUES (2, 'Adam', 'Collins', '123 Main Street', '012345655');
+INSERT INTO Patrons (Id, First_Name, Last_Name, Address, Student_Id) VALUES (3, 'Luke', 'Skywalker', '7865 Boulevard Ave', '0224785326');
+
+INSERT INTO Users (Id, Username, Email, Address) VALUES (1, 'djrobinso', 'djrobinso@gmail.com', '123 Main St' );
+INSERT INTO Users (Id, Username, Email, Address) VALUES (2, 'mKelly', 'mKelly@hotmail.com', '234 Lakeview Dr' );
+INSERT INTO Users (Id, Username, Email, Address) VALUES (3, 'lSkywlkr', 'lSkywlkr2@gmail.com', '646 Ocen Blvd' );
+INSERT INTO Users (Id, Username, Email, Address) VALUES (4, 'gTomlin', 'gTomlin@hotmail.com', '1547 Madison Ave' );
+INSERT INTO Users (Id, Username, Email, Address) VALUES (5, 'tStark', 'tStark@starkindustries.net', '154 Street' );
+INSERT INTO Users (Id, Username, Email, Address) VALUES (6, 'sRodgers', 'sRodgers@aol.net', '154 Street' );
+/****/
+
 
 
 
