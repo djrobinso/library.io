@@ -1,95 +1,55 @@
---Creating Book table
-/**
-DROP TABLE IF EXISTS Book;
-CREATE TABLE Book (
-  Id INT AUTO_INCREMENT  PRIMARY KEY,
-  title VARCHAR(250) NULL,
-  authorFirstName VARCHAR(250)  NULL,
-  authorLastName VARCHAR(250) NULL,
-  ISB_Number VARCHAR(250) NULL,
-  publicationDate VARCHAR(250) NULL,
-  IsCheckedOut NUMBER(1) NULL,
-  checkedOutDate DATETIME NULL,
-  checkedInDate  DATETIME NULL,
-  checkInDate DATETIME NULL,
-  IsCheckedIn NUMBER(1) NULL,
-  IsOverdue NUMBER(1)   NULL,
-  checkInByDate  DATETIME NULL,
-  IsLate NUMBER(1) NULL
-);
-INSERT INTO book(title, authorFirstName, authorLastName, ISB_Number,
-  publicationDate,
-  IsCheckedOut,
-  checkedOutDate,
-  checkedInDate,
-  checkInDate,
-  IsCheckedIn,
-  IsOverdue,
-  checkInByDate,
-  IsLate) VALUES
-  ('Aliko', 'Jake', 'Billard', '02458ISBN', NULL, TRUE, NULL,NULL,NULL,FALSE,FALSE, NULL, NULL);
-**/
-  
-
-  --Creating Users table 
-/**
-DROP TABLE IF EXISTS Users;
-CREATE TABLE Users (
-    Id INT AUTO_INCREMENT  PRIMARY KEY,
-    Username Varchar(250) NULL,
-    Password Varchar(250) NULL,
-    UserRole Varchar(250) NULL,
-    Email Varchar(250) NULL,
-    Address Varchar(250) NULL
-);
-INSERT INTO Users (Username, Password, UserRole, Email, Address) VALUES
-('djrobinso','zaf56874','Librarian','deyonta@coast.edu','4578  Kelly Drive, Columbia SC, 29584');
-**/
-
-
-
--- Creating Patrons table
-/**
-DROP TABLE IF EXISTS Patrons;
-CREATE TABLE Patrons (
-    Id INT AUTO_INCREMENT  PRIMARY KEY,
-    FirstName VarChar(250) NULL,
-    LastName Varchar(250) NULL,
-    Address Varchar(250) NULL,
-    StudentId Varchar(250) NULL,
-    DriverLiscenceNum Varchar(250) NULL,
-    PatronType Varchar(250) NULL
-);
-INSERT INTO Patrons (FirstName, LastName, Address, StudentId, DriverLiscenceNum, PatronType) VALUES
-                    ('Jason', 'Jackson', '3313 New William Drive', '08436214260', NULL, 'Community Patron');
-INSERT INTO Patrons (FirstName, LastName, Address, StudentId, DriverLiscenceNum, PatronType) VALUES
-                    ('Miley', 'Cyrus', '843 James Ave', '08954785', '10652345', 'Student');
-INSERT INTO Patrons (FirstName, LastName, Address, StudentId, DriverLiscenceNum, PatronType) VALUES
-                    ('Donovan', 'Plummer', '245 Sunset Boulevard', '08456824', '54785968', 'Student');
-***/
-/***
-
-DROP TABLE IF EXISTS Patron_Type_Table;
-CREATE TABLE Patron_Type_Table (
-    Id INT AUTO_INCREMENT  PRIMARY KEY,
-    Patron_Type_Code VarChar(250) NULL,
-    Patron_Type Varchar(250) NULL
-);
-**/
 INSERT INTO Patron_Type_Table ( Patron_Type_Code, Patron_Type) VALUES ( '01','Student');
 INSERT INTO Patron_Type_Table ( Patron_Type_Code, Patron_Type) VALUES ( '02','Alumni');
 INSERT INTO Patron_Type_Table (Patron_Type_Code, Patron_Type) VALUES ( '03','Community');
+/********************/
 
 INSERT INTO User_Role ( User_Role_Code, User_Role_Authentication) VALUES ( '01','Admin');
 INSERT INTO User_Role ( User_Role_Code, User_Role_Authentication) VALUES ( '02','User');
+/*********************/
 
 INSERT INTO Book (Id, Title, author_First_Name, author_Last_Name) VALUES (1, 'Jacobs Ladder', 'Stephen', 'King');
 INSERT INTO Book (Id, Title, author_First_Name, author_Last_Name) VALUES (2, 'Scary Book', 'John', 'Oliver');
 INSERT INTO Book (Id, Title, author_First_Name, author_Last_Name) VALUES (3, 'Jacobs Ladder', 'Stephen', 'King');
+/********************/
 
-INSERT INTO Patrons (Id, First_Name, Last_Name, Address, Student_Id) VALUES (1, 'Deyonta', 'Robinson', '3313 New Genisis Dr', '045789653');
-INSERT INTO Patrons (Id, First_Name, Last_Name, Address, Student_Id) VALUES (2, 'Adam', 'Collins', '123 Main Street', '012345655');
-INSERT INTO Patrons (Id, First_Name, Last_Name, Address, Student_Id) VALUES (3, 'Luke', 'Skywalker', '7865 Boulevard Ave', '0224785326');
+--INSERT INTO Patrons (Id, First_Name, Last_Name, Address, Student_Id) VALUES (1, 'Deyonta', 'Robinson', '3313 New Genisis Dr', '045789653');
+--INSERT INTO Patrons (Id, First_Name, Last_Name, Address, Student_Id) VALUES (2, 'Adam', 'Collins', '123 Main Street', '012345655');
+--INSERT INTO Patrons (Id, First_Name, Last_Name, Address, Student_Id) VALUES (3, 'Luke', 'Skywalker', '7865 Boulevard Ave', '0224785326');
+INSERT INTO Patrons (Id, First_Name, Last_Name, Address, Student_Id)
+VALUES
+  (1,'Amelia','Harris','303-6750 Sed, Av.','474462'),
+  (2,'Remedios','Castro','P.O. Box 662, 4305 Odio Ave','445444'),
+  (3,'Castor','Watkins','287-5484 Ultricies Rd.','844564'),
+  (4,'Jack','Warren','P.O. Box 787, 6459 Etiam Road','433169'),
+  (5,'Lars','Boyd','Ap #545-5476 Suspendisse Street','668839'),
+  (6,'Hillary','Bowman','Ap #447-9613 Dolor St.','634417'),
+  (7,'Robert','Davis','Ap #994-1161 A St.','852148'),
+  (8,'Cruz','Dean','4753 Non Ave','916086'),
+  (9,'Justina','Spencer','Ap #489-559 Arcu. Avenue','844176'),
+  (10,'Kyla','Hicks','277-6524 Fermentum St.','368703'),
+  (11,'Ivor','Romero','P.O. Box 745, 9133 Viverra. Rd.','884484'),
+  (12,'Ahmed','Morris','Ap #798-9982 Eros. St.','622469'),
+  (13,'Rhonda','Espinoza','9157 Mauris Rd.','359175'),
+  (14,'Sade','Porter','1448 Euismod Ave','223753'),
+  (15,'Doris','Obrien','Ap #138-7110 Sed Road','583542'),
+  (16,'Audrey','King','9127 Tincidunt Rd.','422475'),
+  (17,'Remedios','Perry','Ap #974-328 Suspendisse Ave','583461'),
+  (18,'Aladdin','Maldonado','Ap #929-3301 Elementum Road','184041'),
+  (19,'Claudia','Black','4067 Enim. Avenue','281325'),
+  (20,'May','Gardner','7179 Tincidunt St.','658485'),
+  (21,'Adria','Pierce','Ap #488-632 Libero. St.','657828'),
+  (22,'Kaye','Black','Ap #503-3135 Eu St.','821611'),
+  (23,'Kelsie','Collins','4206 Gravida. Street','346846'),
+  (24,'Caldwell','Woods','873 Ultricies Ave','727128'),
+  (25,'Cora','Ortiz','P.O. Box 231, 8585 Diam Ave','107320'),
+  (26,'Jasper','Soto','Ap #181-6605 Dignissim Av.','863292'),
+  (27,'India','Little','P.O. Box 348, 4186 Cursus. Road','166615'),
+  (28,'Talon','Carter','Ap #341-3660 Amet Rd.','484213'),
+  (29,'Finn','Vazquez','Ap #800-5450 Nunc Rd.','188139'),
+  (30,'Shafira','Richardson','P.O. Box 429, 3782 Et, St.','226133');
+
+/******************/
+
 
 INSERT INTO Users (Id, Username, Email, Address) VALUES (1, 'djrobinso', 'djrobinso@gmail.com', '123 Main St' );
 INSERT INTO Users (Id, Username, Email, Address) VALUES (2, 'mKelly', 'mKelly@hotmail.com', '234 Lakeview Dr' );
